@@ -42,10 +42,8 @@
                                 $numTwo=$_POST['num2'];
                                 if(empty($numOne) or empty($numTwo)){
                                     echo "<h3 style='color:red;'>Required Must Not Be Empty</h3>";
-                                }
-                            }
-                            $cal = new Calculation;
-                            
+                                }else{
+                            $cal = new Calculation();
                         ?>
                     </div>
                 </div>
@@ -64,6 +62,7 @@
                             <td><?php echo"1st Number Is: ".$numOne."<br>"."2nd Number Is: ".$numTwo."<br>"; $cal->div($numOne, $numTwo);?></td>
                         </tr>
                     </table>
+                    <?php }}?>
                 </div>
             </div>
         </div>
